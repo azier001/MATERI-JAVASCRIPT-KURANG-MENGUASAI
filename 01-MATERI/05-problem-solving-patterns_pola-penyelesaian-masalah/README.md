@@ -28,29 +28,29 @@ js-problem-solving/
 │
 ├── README.md
 │
-├── 01-fundamentals/          # Pattern dasar
+├── 01-fundamentals_pola-dasar/          # Pattern dasar
 │   ├── max-pattern.md
 │   ├── min-pattern.md
 │   ├── frequency-counter.md
 │   └── most-frequent.md
 │
-├── 02-grouping/              # Pattern pengelompokan
+├── 02-grouping_pengelompokan/              # Pattern pengelompokan
 │   ├── basic-grouping.md
 │   └── count-by-class.md
 │
-├── 03-ranking/               # Pattern ranking
+├── 03-ranking_peringkat/               # Pattern ranking
 │   ├── manual-ranking.md
 │   ├── top-1-per-group.md
 │   └── top-2-per-group.md
 │
-├── 04-case-study/            # Penerapan ke soal nyata
+├── 04-case-study_studi-kasus/            # Penerapan ke soal nyata
 │   ├── highest-score.md
 │   ├── lowest-score.md
 │   ├── count-by-class.md
 │   ├── top-two-by-class.md
 │   └── most-frequent-value.md
 │
-└── 05-mental-model/          # Cara berpikir & ringkasan
+└── 05-mental-model_cara-berpikir/          # Cara berpikir & ringkasan
     └── thinking-patterns.md
 ```
 
@@ -62,21 +62,21 @@ Folder dirancang dengan urutan yang logis — dari fondasi hingga penerapan:
 
 | Urutan | File | Konsep Utama |
 |--------|------|--------------|
-| 1 | [max-pattern.md](01-fundamentals/max-pattern.md) | Mencari nilai terbesar |
-| 2 | [min-pattern.md](01-fundamentals/min-pattern.md) | Mencari nilai terkecil |
-| 3 | [frequency-counter.md](01-fundamentals/frequency-counter.md) | Menghitung kemunculan data |
-| 4 | [most-frequent.md](01-fundamentals/most-frequent.md) | Mencari data yang paling sering muncul |
-| 5 | [basic-grouping.md](02-grouping/basic-grouping.md) | Mengelompokkan data |
-| 6 | [count-by-class.md](02-grouping/count-by-class.md) | Menghitung per kategori dari objek |
-| 7 | [manual-ranking.md](03-ranking/manual-ranking.md) | Ranking tanpa sorting |
-| 8 | [top-1-per-group.md](03-ranking/top-1-per-group.md) | Satu terbaik per grup |
-| 9 | [top-2-per-group.md](03-ranking/top-2-per-group.md) | Dua terbaik per grup |
-| 10 | [highest-score.md](04-case-study/highest-score.md) | Max Pattern pada data nyata |
-| 11 | [lowest-score.md](04-case-study/lowest-score.md) | Min Pattern pada data nyata |
-| 12 | [count-by-class.md](04-case-study/count-by-class.md) | Frequency Counter pada data nyata |
-| 13 | [top-two-by-class.md](04-case-study/top-two-by-class.md) | Grouping + Ranking pada data nyata |
-| 14 | [most-frequent-value.md](04-case-study/most-frequent-value.md) | Most Frequent Pattern pada data nyata |
-| 15 | [thinking-patterns.md](05-mental-model/thinking-patterns.md) | Cara berpikir memilih pattern |
+| 1 | [max-pattern.md](01-fundamentals_pola-dasar/max-pattern.md) | Mencari nilai terbesar |
+| 2 | [min-pattern.md](01-fundamentals_pola-dasar/min-pattern.md) | Mencari nilai terkecil |
+| 3 | [frequency-counter.md](01-fundamentals_pola-dasar/frequency-counter.md) | Menghitung kemunculan data |
+| 4 | [most-frequent.md](01-fundamentals_pola-dasar/most-frequent.md) | Mencari data yang paling sering muncul |
+| 5 | [basic-grouping.md](02-grouping_pengelompokan/basic-grouping.md) | Mengelompokkan data |
+| 6 | [count-by-class.md](02-grouping_pengelompokan/count-by-class.md) | Menghitung per kategori dari objek |
+| 7 | [manual-ranking.md](03-ranking_peringkat/manual-ranking.md) | Ranking tanpa sorting |
+| 8 | [top-1-per-group.md](03-ranking_peringkat/top-1-per-group.md) | Satu terbaik per grup |
+| 9 | [top-2-per-group.md](03-ranking_peringkat/top-2-per-group.md) | Dua terbaik per grup |
+| 10 | [highest-score.md](04-case-study_studi-kasus/highest-score.md) | Max Pattern pada data nyata |
+| 11 | [lowest-score.md](04-case-study_studi-kasus/lowest-score.md) | Min Pattern pada data nyata |
+| 12 | [count-by-class.md](04-case-study_studi-kasus/count-by-class.md) | Frequency Counter pada data nyata |
+| 13 | [top-two-by-class.md](04-case-study_studi-kasus/top-two-by-class.md) | Grouping + Ranking pada data nyata |
+| 14 | [most-frequent-value.md](04-case-study_studi-kasus/most-frequent-value.md) | Most Frequent Pattern pada data nyata |
+| 15 | [thinking-patterns.md](05-mental-model_cara-berpikir/thinking-patterns.md) | Cara berpikir memilih pattern |
 
 ---
 
@@ -86,15 +86,15 @@ Tidak tahu harus pakai pattern apa? Lihat output yang diinginkan:
 
 | Output yang diinginkan | Pattern yang dipakai | File |
 |------------------------|---------------------|------|
-| Satu nilai terbesar | Max Pattern | [max-pattern.md](01-fundamentals/max-pattern.md) |
-| Satu nilai terkecil | Min Pattern | [min-pattern.md](01-fundamentals/min-pattern.md) |
-| `{ key: count }` | Frequency Counter | [frequency-counter.md](01-fundamentals/frequency-counter.md) |
-| Data yang paling sering muncul | Most Frequent | [most-frequent.md](01-fundamentals/most-frequent.md) |
-| `{ key: [...items] }` | Basic Grouping | [basic-grouping.md](02-grouping/basic-grouping.md) |
-| `{ key: count }` dari objek | Count By Class | [count-by-class.md](02-grouping/count-by-class.md) |
-| Array top-K | Manual Ranking | [manual-ranking.md](03-ranking/manual-ranking.md) |
-| `{ key: item_terbaik }` | Top 1 Per Group | [top-1-per-group.md](03-ranking/top-1-per-group.md) |
-| `{ key: [item1, item2] }` | Top 2 Per Group | [top-2-per-group.md](03-ranking/top-2-per-group.md) |
+| Satu nilai terbesar | Max Pattern | [max-pattern.md](01-fundamentals_pola-dasar/max-pattern.md) |
+| Satu nilai terkecil | Min Pattern | [min-pattern.md](01-fundamentals_pola-dasar/min-pattern.md) |
+| `{ key: count }` | Frequency Counter | [frequency-counter.md](01-fundamentals_pola-dasar/frequency-counter.md) |
+| Data yang paling sering muncul | Most Frequent | [most-frequent.md](01-fundamentals_pola-dasar/most-frequent.md) |
+| `{ key: [...items] }` | Basic Grouping | [basic-grouping.md](02-grouping_pengelompokan/basic-grouping.md) |
+| `{ key: count }` dari objek | Count By Class | [count-by-class.md](02-grouping_pengelompokan/count-by-class.md) |
+| Array top-K | Manual Ranking | [manual-ranking.md](03-ranking_peringkat/manual-ranking.md) |
+| `{ key: item_terbaik }` | Top 1 Per Group | [top-1-per-group.md](03-ranking_peringkat/top-1-per-group.md) |
+| `{ key: [item1, item2] }` | Top 2 Per Group | [top-2-per-group.md](03-ranking_peringkat/top-2-per-group.md) |
 
 ---
 
