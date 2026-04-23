@@ -48,7 +48,8 @@ js-problem-solving/
 │   ├── lowest-score.md
 │   ├── count-by-class.md
 │   ├── top-two-by-class.md
-│   └── most-frequent-value.md
+│   ├── most-frequent-value.md
+│   └── melee-ranged-grouping.md
 │
 └── 05-mental-model_cara-berpikir/          # Cara berpikir & ringkasan
     └── thinking-patterns.md
@@ -76,7 +77,8 @@ Folder dirancang dengan urutan yang logis — dari fondasi hingga penerapan:
 | 12 | [count-by-class.md](04-case-study_studi-kasus/count-by-class.md) | Frequency Counter pada data nyata |
 | 13 | [top-two-by-class.md](04-case-study_studi-kasus/top-two-by-class.md) | Grouping + Ranking pada data nyata |
 | 14 | [most-frequent-value.md](04-case-study_studi-kasus/most-frequent-value.md) | Most Frequent Pattern pada data nyata |
-| 15 | [thinking-patterns.md](05-mental-model_cara-berpikir/thinking-patterns.md) | Cara berpikir memilih pattern |
+| 15 | [melee-ranged-grouping.md](04-case-study_studi-kasus/melee-ranged-grouping.md) | Fixed Grouping (Array) pada data nyata |
+| 16 | [thinking-patterns.md](05-mental-model_cara-berpikir/thinking-patterns.md) | Cara berpikir memilih pattern |
 
 ---
 
@@ -95,6 +97,7 @@ Tidak tahu harus pakai pattern apa? Lihat output yang diinginkan:
 | Array top-K | Manual Ranking | [manual-ranking.md](03-ranking_peringkat/manual-ranking.md) |
 | `{ key: item_terbaik }` | Top 1 Per Group | [top-1-per-group.md](03-ranking_peringkat/top-1-per-group.md) |
 | `{ key: [item1, item2] }` | Top 2 Per Group | [top-2-per-group.md](03-ranking_peringkat/top-2-per-group.md) |
+| Array `[[], []]` posisi mutlak | Fixed Grouping | [melee-ranged-grouping.md](04-case-study_studi-kasus/melee-ranged-grouping.md) |
 
 ---
 

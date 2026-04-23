@@ -52,7 +52,8 @@ CASE STUDY
 ├── Highest Score        → Max Pattern pada array of object
 ├── Lowest Score         → Min Pattern pada array of object
 ├── Count By Class       → Frequency Counter pada array of object
-└── Top Two By Class     → Grouping + Manual Ranking pada data nyata
+├── Top Two By Class     → Grouping + Manual Ranking pada data nyata
+└── Melee Ranged         → Fixed Grouping (Array) pada data nyata
 ```
 
 ---
@@ -67,7 +68,8 @@ Gunakan alur ini setiap kali menemukan soal baru:
 |-----------------------|---------------------|
 | Satu angka atau objek | Max / Min Pattern |
 | Object `{ key: count }` | Frequency Counter |
-| Object `{ key: [...items] }` | Grouping |
+| Object `{ key: [...items] }` | Grouping (Object) |
+| Array `[[], []]` dengan posisi index mutlak | Fixed Grouping (Array) |
 | Object `{ key: satu_item_terbaik }` | Grouping + Max Pattern |
 | Object `{ key: [item1, item2] }` | Grouping + Manual Ranking |
 
@@ -90,12 +92,16 @@ Apakah hasilnya dikelompokkan per kategori?
 │
 ├── TIDAK → cukup satu tracker (max / min / counter)
 │
-└── YA → perlu object sebagai wadah per grup
+└── YA → perlu wadah per grup
           │
-          ├── Hitung saja? → Frequency Counter
-          ├── Kumpulkan semua? → Basic Grouping
-          ├── Ambil 1 terbaik? → Top 1 Per Group
-          └── Ambil 2 terbaik? → Top 2 Per Group
+          ├── Output = Object? → pakai {} (Dynamic Grouping)
+          │     ├── Hitung saja? → Frequency Counter
+          │     ├── Kumpulkan semua? → Basic Grouping
+          │     ├── Ambil 1 terbaik? → Top 1 Per Group
+          │     └── Ambil 2 terbaik? → Top 2 Per Group
+          │
+          └── Output = Array [[], []] dengan posisi mutlak?
+                → pakai [[], []] (Fixed Grouping)
 ```
 
 ---
@@ -227,3 +233,8 @@ if (max === null || score > max.score) {
 > **6. Manual Ranking vs Sort + Slice — pilih berdasarkan K.**
 > K kecil (1 atau 2) → Manual Ranking lebih efisien (O(n)).
 > K besar (5, 10, dst) → Sort + Slice lebih praktis meski O(n log n).
+
+---
+
+> **7. Object bukan satu-satunya wadah grouping.**
+> Jika soal meminta posisi index yang mutlak, gunakan Array pre-defined `[[], []]`. Object untuk fleksibilitas, Array untuk posisi tetap.

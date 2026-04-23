@@ -281,6 +281,8 @@ Perbedaan kunci dengan Frequency Counter:
 | Hasil | `{ key: count }` | `{ key: [...items] }` |
 | Tujuan | Menghitung | Mengumpulkan |
 
+> 📌 **Variasi Grouping:** Tidak semua grouping menggunakan Object. Jika soal meminta posisi index yang **mutlak** (misal: Ranged wajib di index 0, Melee wajib di index 1), gunakan **Array pre-defined `[[], []]`** sebagai wadah. Lihat studi kasus: [melee-ranged-grouping.md](../04-case-study_studi-kasus/melee-ranged-grouping.md)
+
 ---
 
 ## 📝 Pelajaran yang Didapat
