@@ -11,16 +11,17 @@
 
 ## 🔗 Daftar Isi
 
-- [Deskripsi Soal](#-deskripsi-soal)
-- [Aturan Validasi](#-aturan-validasi)
-- [Konsep Kunci](#-konsep-kunci)
-- [Final Code](#-final-code)
-- [Test Cases](#-test-cases)
-- [Pitfalls](#-pitfalls)
-- [Keywords](#-keywords)
+- 📋 [Deskripsi Soal](#deskripsi-soal)
+- 📌 [Aturan Validasi](#aturan-validasi)
+- 💡 [Konsep Kunci](#konsep-kunci)
+- 🔢 [Final Code](#final-code)
+- 🧪 [Test Cases](#test-cases)
+- ⚠️ [Pitfalls](#pitfalls)
+- 🔑 [Keywords](#keywords)
 
 ---
 
+<a name="deskripsi-soal"></a>
 ## 📋 Deskripsi Soal
 
 NIK adalah nomor identitas unik warga negara Indonesia yang tercetak di KTP. Setiap NIK terdiri dari **tepat 16 digit angka**.
@@ -29,6 +30,7 @@ Tugasnya: buat fungsi `isValidNIK(nik)` yang mengembalikan `true` jika NIK valid
 
 ---
 
+<a name="aturan-validasi"></a>
 ## 📌 Aturan Validasi
 
 NIK dianggap **valid** jika memenuhi **semua** syarat berikut:
@@ -46,6 +48,7 @@ NIK dianggap **valid** jika memenuhi **semua** syarat berikut:
 
 ---
 
+<a name="konsep-kunci"></a>
 ## 💡 Konsep Kunci
 
 ### 1. `typeof` — Mengecek Tipe Data
@@ -111,6 +114,7 @@ INPUT: nik
 
 ---
 
+<a name="final-code"></a>
 ## 🔢 Final Code
 
 ```js
@@ -125,6 +129,7 @@ const isValidNIK = (nik) => {
 
 ---
 
+<a name="test-cases"></a>
 ## 🧪 Test Cases
 
 ```js
@@ -196,6 +201,7 @@ RESULT: 11/11 Passed
 
 ---
 
+<a name="pitfalls"></a>
 ## ⚠️ Pitfalls
 
 ### 1. Regex tanpa `^` dan `$`
@@ -237,6 +243,7 @@ if (typeof nik !== 'string') return false
 
 ---
 
+<a name="keywords"></a>
 ## 🔑 Keywords
 
 | Keyword | Penjelasan |
