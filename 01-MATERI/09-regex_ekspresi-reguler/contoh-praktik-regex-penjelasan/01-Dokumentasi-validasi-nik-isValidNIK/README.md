@@ -3,7 +3,6 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)
 ![Regex](https://img.shields.io/badge/Konsep-Regex-blue)
 ![typeof](https://img.shields.io/badge/Konsep-typeof-green)
-![Status](https://img.shields.io/badge/Status-Selesai-brightgreen)
 
 > Fungsi untuk memvalidasi apakah sebuah input merupakan NIK (Nomor Induk Kependudukan) yang valid.
 
@@ -14,9 +13,9 @@
 - 📋 [Deskripsi Soal](#deskripsi-soal)
 - 📌 [Aturan Validasi](#aturan-validasi)
 - 💡 [Konsep Kunci](#konsep-kunci)
+- ⚠️ [Pitfalls](#pitfalls)
 - 🔢 [Final Code](#final-code)
 - 🧪 [Test Cases](#test-cases)
-- ⚠️ [Pitfalls](#pitfalls)
 - 🔑 [Keywords](#keywords)
 
 ---
@@ -114,6 +113,66 @@ INPUT: nik
 
 ---
 
+<a name="pitfalls"></a>
+## ⚠️ Pitfalls
+
+### 1. Regex tanpa `^` dan `$`
+
+Percobaan pertama yang umum — **hanya mencari keberadaan**, bukan memvalidasi seluruh string:
+
+```js
+// ❌ Salah — hanya cek "ada 16 digit di dalamnya"
+const regex = /\d{16}/
+regex.test("32012345678900012") // true — padahal 17 digit!
+
+// ✅ Benar — cek seluruh string harus tepat 16 digit
+const regex = /^\d{16}$/
+regex.test("32012345678900012") // false
+```
+
+| Masalah | Penjelasan |
+|---------|------------|
+| Tanpa `^` dan `$` | Regex cukup menemukan **sub-string** 16 digit di mana saja |
+| String 17 digit pun lolos | `"32012345678900012"` dianggap valid karena ada 16 digit di dalamnya |
+
+---
+
+### 2. Tidak cek `typeof` terlebih dahulu
+
+```js
+// ❌ Salah — regex.test() otomatis konversi number ke string
+const isValidNIK = (nik) => /^\d{16}$/.test(nik)
+isValidNIK(3201234567890001) // true — padahal harusnya false!
+
+// ✅ Benar — tolak dulu yang bukan string
+const isValidNIK = (nik) => {
+  if (typeof nik !== 'string') return false
+  return /^\d{16}$/.test(nik)
+}
+isValidNIK(3201234567890001) // false ✅
+```
+
+| Masalah | Penjelasan |
+|---------|------------|
+| `.test()` terlalu permisif | `regex.test()` mengkonversi input ke string secara otomatis |
+| Number 16 digit lolos | `3201234567890001` dikonversi menjadi `"3201234567890001"` dan lolos validasi |
+
+---
+
+### 3. Kebalik kondisi `typeof`
+
+```js
+// ❌ Salah — menolak yang bukan number, padahal NIK harus string
+if (typeof nik !== 'number') return false
+
+// ✅ Benar — menolak yang bukan string
+if (typeof nik !== 'string') return false
+```
+
+> 💡 **Pelajaran:** Selalu pastikan kondisi `typeof` memeriksa tipe yang **diinginkan**, bukan tipe yang ingin ditolak.
+
+---
+
 <a name="final-code"></a>
 ## 🔢 Final Code
 
@@ -127,10 +186,56 @@ const isValidNIK = (nik) => {
 }
 ```
 
+**Alternatif** ringkas dengan short-circuit:
+
+```js
+const isValidNIK = (nik) =>
+  typeof nik === 'string' && /^\d{16}$/.test(nik)
+```
+
+> 💡 Versi ringkas ini menggunakan `&&` (logical AND) sebagai pengganti `if` —
+> jika `typeof` gagal, regex tidak akan dieksekusi sama sekali.
+
 ---
 
 <a name="test-cases"></a>
 ## 🧪 Test Cases
+
+### Fungsi
+
+```js
+const isValidNIK = (nik) => {
+  if (typeof nik !== 'string') return false
+  const regex = /^\d{16}$/
+  return regex.test(nik)
+}
+```
+
+### Console.log
+
+```js
+console.log(isValidNIK('3201234567890001'))    // true
+console.log(isValidNIK('320123456789000'))     // false  (15 digit)
+console.log(isValidNIK('32012345678900012'))   // false  (17 digit)
+console.log(isValidNIK('320123456789000X'))    // false  (ada huruf)
+console.log(isValidNIK(3201234567890001))      // false  (bukan string)
+console.log(isValidNIK(''))                    // false  (string kosong)
+console.log(isValidNIK(null))                  // false  (null)
+```
+
+### Hasil
+
+```
+true
+false
+false
+false
+false
+false
+false
+```
+
+### Test Runner Lengkap
 
 ```js
 const testCases = [
@@ -179,7 +284,7 @@ function runTests(fn) {
 runTests(isValidNIK)
 ```
 
-### Hasil
+### Hasil Test Runner
 
 ```
 === RUNNING TESTS ===
@@ -201,48 +306,6 @@ RESULT: 11/11 Passed
 
 ---
 
-<a name="pitfalls"></a>
-## ⚠️ Pitfalls
-
-### 1. Regex tanpa `^` dan `$`
-
-```js
-// ❌ Salah — hanya cek "ada 16 digit di dalamnya"
-const regex = /\d{16}/
-regex.test("32012345678900012") // true — padahal 17 digit!
-
-// ✅ Benar — cek seluruh string harus tepat 16 digit
-const regex = /^\d{16}$/
-regex.test("32012345678900012") // false
-```
-
-### 2. Tidak cek typeof terlebih dahulu
-
-```js
-// ❌ Salah — regex.test() otomatis konversi number ke string
-const isValidNIK = (nik) => /^\d{16}$/.test(nik)
-isValidNIK(3201234567890001) // true — padahal harusnya false!
-
-// ✅ Benar — tolak dulu yang bukan string
-const isValidNIK = (nik) => {
-  if (typeof nik !== 'string') return false
-  return /^\d{16}$/.test(nik)
-}
-isValidNIK(3201234567890001) // false ✅
-```
-
-### 3. Kebalik kondisi typeof
-
-```js
-// ❌ Salah — menolak yang bukan number, padahal NIK harus string
-if (typeof nik !== 'number') return false
-
-// ✅ Benar — menolak yang bukan string
-if (typeof nik !== 'string') return false
-```
-
----
-
 <a name="keywords"></a>
 ## 🔑 Keywords
 
@@ -255,3 +318,4 @@ if (typeof nik !== 'string') return false
 | `\d` | Shorthand regex untuk digit angka 0–9 |
 | `{16}` | Quantifier regex — harus muncul tepat 16 kali |
 | Early return | Teknik keluar dari fungsi lebih awal jika kondisi tidak terpenuhi |
+| `&&` short-circuit | Ekspresi kanan hanya dieksekusi jika ekspresi kiri bernilai `true` |

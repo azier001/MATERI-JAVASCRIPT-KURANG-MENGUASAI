@@ -3,7 +3,6 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)
 ![Regex](https://img.shields.io/badge/Konsep-Regex-blue)
 ![Character Class](https://img.shields.io/badge/Konsep-Character%20Class-green)
-![Status](https://img.shields.io/badge/Status-Selesai-brightgreen)
 
 > Fungsi untuk memvalidasi apakah sebuah string **hanya berisi huruf** (a-z dan A-Z), tanpa angka, spasi, atau simbol apapun.
 
