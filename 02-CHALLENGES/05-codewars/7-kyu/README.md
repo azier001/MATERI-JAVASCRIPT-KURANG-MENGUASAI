@@ -20,7 +20,9 @@ Level **7 kyu** mulai memperkenalkan algoritma yang lebih logis. Soal-soalnya be
 
 | No | Nama Challenge | Link Soal | Status |
 |----|---------------|-----------|--------|
-| -  | *Belum ada*   | -         | -      |
+| 01 | [Categorize New Member](01-categorize-new-member/README.md) | [Codewars](https://www.codewars.com/kata/5502c9e7b3216ec63c0001aa) | ✅ Selesai |
+| 02 | [List Filtering](02-Dokumentasi-list-filtering-number-only_penyaringan-daftar-khusus-angka/README.md) | [Codewars](https://www.codewars.com/kata/53dbd5315a3c69571d00064a) | ✅ Selesai |
+| 03 | [Binary Addition](03-Dokumentasi-binary-addition_penjumlahan-biner/README.md) | [Codewars](https://www.codewars.com/kata/551f37452ff852b7bd000139) | ✅ Selesai |
 
 > 💡 Tambahkan baris baru setiap kali menyelesaikan challenge 7 kyu!
 

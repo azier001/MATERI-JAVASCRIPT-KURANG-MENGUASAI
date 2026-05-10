@@ -11,9 +11,17 @@
 
 ---
 
-## 📝 Deskripsi Soal
+## 📝 Deskripsi Soal (Bahasa Inggris — Asli)
 
-> *Salin atau parafrase deskripsi soal asli dari Codewars di sini.*
+> *Salin deskripsi soal asli dari Codewars di sini.*
+
+## 📝 Deskripsi Soal (Bahasa Indonesia — Terjemahan)
+
+> Tulis ulang atau parafrase inti masalah dalam Bahasa Indonesia yang mudah dipahami pemula. Gunakan bahasa sehari-hari.
+
+### 🗣️ Penjelasan Sederhana
+
+Jelaskan inti soal menggunakan analogi dunia nyata agar pemula mudah membayangkan masalahnya.
 
 ---
 
@@ -21,8 +29,8 @@
 
 | Parameter | Tipe | Deskripsi |
 |-----------|------|-----------|
-| `[param1]` | `[tipe]` | [penjelasan] |
-| `[param2]` | `[tipe]` | [penjelasan] |
+| `[param1]` | `[tipe]` | [penjelasan dalam Bahasa Indonesia] |
+| `[param2]` | `[tipe]` | [penjelasan dalam Bahasa Indonesia] |
 
 ---
 
@@ -30,30 +38,33 @@
 
 | Tipe | Deskripsi |
 |------|-----------|
-| `[tipe]` | [penjelasan nilai yang dikembalikan] |
+| `[tipe]` | [penjelasan nilai yang dikembalikan dalam Bahasa Indonesia] |
 
 ---
 
 ## 🧪 Contoh
 
 ```javascript
-// Contoh 1
+// Contoh 1 — [deskripsi singkat skenario]
 [namaFungsi]([input1]) // → [output1]
+// Penjelasan: [kenapa hasilnya seperti itu]
 
-// Contoh 2
+// Contoh 2 — [deskripsi singkat skenario]
 [namaFungsi]([input2]) // → [output2]
+// Penjelasan: [kenapa hasilnya seperti itu]
 
-// Contoh 3 (edge case)
+// Contoh 3 — Edge case
 [namaFungsi]([input3]) // → [output3]
+// Penjelasan: [kenapa hasilnya seperti itu]
 ```
 
 ---
 
 ## ⚠️ Catatan Khusus
 
-- [ ] [Catatan penting 1 dari soal]
-- [ ] [Catatan penting 2 dari soal]
-- [ ] [Edge case yang perlu diperhatikan]
+- [ ] [Catatan penting 1 — dalam Bahasa Indonesia]
+- [ ] [Catatan penting 2 — dalam Bahasa Indonesia]
+- [ ] [Edge case atau jebakan yang perlu diperhatikan]
 
 ---
 
